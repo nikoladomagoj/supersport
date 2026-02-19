@@ -21,6 +21,6 @@ Klikne PRIPREMI ZA UPLATU.
 Ulog je ostavljen po defaultu 1
 Izračuna ukupnu kvotu i očekivani dobitak
 
-pck jsonu script
+pck jsonu scripte
     "test": "playwright test",
     "test:headed": "playwright test --headed"
