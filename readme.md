@@ -1,5 +1,5 @@
 Playwright Test Automation – Supersport.hr
-📋 Preduvjeti
+Preduvjeti:
 
 Prije pokretanja projekta potrebno je imati instalirano:
 
@@ -10,7 +10,7 @@ Provjera verzija:
 node -v
 npm -v
 
-⚙️ Instalacija
+Instalacija
 
 Inicijalizacija Playwright projekta:
 
@@ -24,7 +24,7 @@ npx playwright install
 
 U playwright.config.js konfiguraciji definirano je da se testovi izvršavaju isključivo u Chromium (Chrome) pregledniku.
 
-▶️ Pokretanje testova
+Pokretanje testova:
 
 U package.json definirane su sljedeće skripte:
 
