@@ -1,26 +1,64 @@
-Instalacija
+Playwright Test Automation – Supersport.hr
+📋 Preduvjeti
 
-node 18+
-provjera node verzije node -v
-provjera npm verzije npm -v
+Prije pokretanja projekta potrebno je imati instalirano:
 
-Instaliraj Playwright:
+Node.js 18+
+
+Provjera verzija:
+
+node -v
+npm -v
+
+⚙️ Instalacija
+
+Inicijalizacija Playwright projekta:
 
 npm init playwright@latest
+
+
+Instalacija preglednika:
+
 npx playwright install
 
-u playwright config file-u smo definirali da koristimo samo chrome za izvršavanje testa
 
-Što test radi??
+U playwright.config.js konfiguraciji definirano je da se testovi izvršavaju isključivo u Chromium (Chrome) pregledniku.
 
+▶️ Pokretanje testova
 
-Otvara Supersport.hr i prihvaća cookies / banner ako postoji.
-Klikne na Sport → SUB.
-Odabere fiksne kvote: 1,20 i 1,45.
-Klikne PRIPREMI ZA UPLATU.
-Ulog je ostavljen po defaultu 1
-Izračuna ukupnu kvotu i očekivani dobitak
+U package.json definirane su sljedeće skripte:
 
-pck jsonu scripte
-    "test": "playwright test",
-    "test:headed": "playwright test --headed"
+"scripts": {
+  "test": "playwright test", //ovo je headless mode
+  "test:headed": "playwright test --headed" //UI mode (preporuka pokrenuti UI da se vidi što se događa na UI-u)
+}
+
+🧪 Opis testa
+
+Automatizirani test izvršava sljedeće korake na stranici Supersport.hr:
+
+Otvara web stranicu.
+
+Prihvaća cookies/banner ukoliko je prikazan.
+
+Navigira na:
+
+Sport → SUB
+
+Odabire dvije fiksne kvote:
+
+1,20
+
+1,45
+
+Klikne na PRIPREMI ZA UPLATU.
+
+Ostavlja zadani ulog (1).
+
+Validira:
+
+Ukupnu kvotu
+
+Očekivani dobitak
+
+Test verificira ispravnost izračuna ukupne kvote i potencijalnog dobitka.
